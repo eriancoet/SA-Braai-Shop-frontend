@@ -29,9 +29,9 @@ const CheckoutPage = () => {
       const response = await axios.post("https://sa-braai-shop-backend.onrender.com/api/payfast/pay", {
         amount: total, // numeric only
         item_name: "Biltong Shop Order",
-        return_url: "http://localhost:3000/checkout-success",
-        cancel_url: "http://localhost:3000/checkout-cancel",
-        notify_url: "http://localhost:5000/api/payfast/notify",
+        return_url: "https://sa-braai-shop-frontend.onrender.com/checkout-success",
+        cancel_url: "https://sa-braai-shop-frontend.onrender.com/checkout-cancel",
+        notify_url: "https://sa-braai-shop-backend.onrender.com/api/payfast/notify",
       });
 
       const { paymentUrl } = response.data;
