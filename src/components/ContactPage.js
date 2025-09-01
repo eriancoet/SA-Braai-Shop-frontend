@@ -21,7 +21,7 @@ const ContactPage = () => {
     setStatus({ loading: true, success: null, error: null });
 
     try {
-      const response = await axios.post("/api/contact", form);
+      const response = await axios.post("https://sa-braai-shop-backend.onrender.com/api/contact", form);
       if (response.data.success) {
         setStatus({ loading: false, success: response.data.msg, error: null });
         setForm({ name: "", email: "", message: "" });
