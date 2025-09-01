@@ -26,7 +26,7 @@ const CheckoutPage = () => {
 
   const handlePayFast = async () => {
     try {
-      const response = await axios.post("http://localhost:5000/api/payfast/pay", {
+      const response = await axios.post("https://sa-braai-shop-backend.onrender.com/api/payfast/pay", {
         amount: total, // numeric only
         item_name: "Biltong Shop Order",
         return_url: "http://localhost:3000/checkout-success",
